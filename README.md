@@ -1,4 +1,4 @@
-# Tempaltes and Styles for Craggy Range
+# Boilerplate for easy Static Layout and Templating
 
 ## Installation
 
