@@ -21,6 +21,8 @@ To open it in a default browser use the ```-o/--open``` parameter run:
  
  ```gulp -p=view_name -o```
  
+## Layouts
+
 You can render different layouts using the ```-l/--layout``` parameter (by default is the 'desktop' layout):
  
  ```gulp -p=view_name -o -l=mobile``` or ```gulp -p=view_name -o -l=tablet```
