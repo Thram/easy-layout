@@ -21,7 +21,8 @@ var folders = {
 
 var page        = argv.p || argv.page || 'kitchen_sink',
     openBrowser = (argv.o || argv.open) !== undefined || false,
-    layout      = argv.l || argv.layout || 'desktop';
+    layout      = argv.l || argv.layout || 'desktop',
+    release     = (argv.r || argv.release) !== undefined || false;
 
 folders.assets  = folders.src + '/assets';
 folders.layouts = folders.src + '/layouts';
@@ -63,7 +64,7 @@ gulp.task('watch', function (cb) {
 
 gulp.task('open', function (cb) {
   if (openBrowser) {
-    return gulp.src(folders.dest + '/index.html')
+    return gulp.src(folders.dest + (release ? '/index.html' : '/wrapper.html'))
       .pipe(open());
   } else {
     return cb();
@@ -71,8 +72,8 @@ gulp.task('open', function (cb) {
 
 });
 
-gulp.task('wrapper', function () {
-  return gulp.src(folders.layouts + '/wrapper.html')
+gulp.task('include', function () {
+  return gulp.src(folders.layouts + '/index.html')
     .pipe(fileinclude({
       basepath: folders.layouts + '/views/' + page + '.html'
     }))
@@ -86,8 +87,8 @@ gulp.task('wrapper', function () {
     .pipe(gulp.dest(folders.dest));
 });
 
-gulp.task('include', function () {
-  return gulp.src(folders.layouts + '/index.html')
+gulp.task('wrapper', function () {
+  return gulp.src(folders.layouts + '/wrapper.html')
     .pipe(dom(function () {
       this.querySelectorAll('iframe')[0].className = layout + '-layout';
       return this;
