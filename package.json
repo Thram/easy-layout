@@ -1,0 +1,27 @@
+{
+  "name": "craggy-range-html",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thram",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/touchtechnz/craggy-range-html#readme",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gridle": "^2.0.46",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-dom": "^0.8.5",
+    "gulp-file-include": "^0.13.7",
+    "gulp-open": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^1.5.3",
+    "yargs": "^4.6.0"
+  }
+}
