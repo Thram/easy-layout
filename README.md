@@ -1,5 +1,7 @@
 # Boilerplate for easy Static Layout and Templating
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Thram/easy-layout.svg)](https://greenkeeper.io/)
+
 ## Installation
 
 ```npm install```
